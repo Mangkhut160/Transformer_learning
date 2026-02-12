@@ -126,8 +126,8 @@ def demo_run() -> None:
     np.random.seed(0)
     batch, seq_len, embed_dim = 2, 4, 8
     encoder = TransformerEncoder(num_layers=1, embed_dim=embed_dim, num_heads=2, ffn_hidden=16)
-    dummy = np.random.randn(batch, seq_len, embed_dim).astype(np.float32)
-    out = encoder(dummy, mask=None)
+    sample_input = np.random.randn(batch, seq_len, embed_dim).astype(np.float32)
+    out = encoder(sample_input, mask=None)
     print("输出形状:", out.shape)
 
 

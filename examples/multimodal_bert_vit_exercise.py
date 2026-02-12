@@ -107,7 +107,7 @@ class MultiModalFusion:
 
 
 def demo_run() -> None:
-    np.random.seed(7)
+    np.random.seed(123)
     texts = ["hello world", "tiny multimodal"]
     vocab, _ = build_vocab(texts)
     max_len = 6
