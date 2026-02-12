@@ -146,7 +146,7 @@ class TransformerEncoderLayer:
         attn_out = self.attn(x, mask)
         x = self.norm1(x + attn_out)
 
-        # 前馈 + 残余
+        # 前馈 + 残差
         ffn_out = self.ffn(x)
         x = self.norm2(x + ffn_out)
         return x
