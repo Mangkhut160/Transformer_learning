@@ -144,7 +144,7 @@ def demo_run() -> None:
     texts = ["a small cat", "a lovely dog"]
     vocab, _ = build_vocab(texts)
     max_len = 6
-    token_ids = np.stack([simple_tokenize(t, vocab, max_len) for t in texts], axis=0)
+    token_ids = np.stack([simple_tokenize(text, vocab, max_len) for text in texts], axis=0)
 
     text_encoder = TextEncoder(
         vocab_size=len(vocab), embed_dim=32, num_layers=1, num_heads=4, ffn_hidden=64, max_len=max_len
